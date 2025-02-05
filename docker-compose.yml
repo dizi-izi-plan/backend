@@ -38,13 +38,21 @@ services:
     ports:
       - "9000:9000" # API port
       - "9001:9001" # Console
-    environment:
-      MINIO_ROOT_USER: admin
-      MINIO_ROOT_PASSWORD: admin-PASSWORD
+    env_file:
+      - .env
     volumes:
-      - ./dizi-minio-data:/data
-    command: server /data --console-address ":9001"
+      - dizi-minio-data:/data
+      - ./infra/init_minio.sh:/init_minio.sh
+      - ./infra/read-write-list-policy.json:/read-write-list-policy.json
+    entrypoint: ["/bin/sh", "/init_minio.sh"]
+    restart: always
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
+      interval: 30s
+      retries: 3
+      start_period: 10s
 
 
 volumes:
   dizi_postgres_dev:
+  dizi-minio-data:

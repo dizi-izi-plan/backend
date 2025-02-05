@@ -24,5 +24,6 @@ class FurnitureSerializer(serializers.ModelSerializer):
             "length_access",
             "width_access",
             "type_of_rooms",
+            "image"
         )
         model = Furniture
