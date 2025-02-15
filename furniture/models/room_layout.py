@@ -8,8 +8,8 @@ from furniture.validators import minimum_len_width_validator
 User = get_user_model()
 
 
-class RoomLayout(models.Model):
-    """Модель планировки."""
+class Room(models.Model):
+    """Model of room."""
 
     user = models.ForeignKey(
         User,
@@ -18,13 +18,8 @@ class RoomLayout(models.Model):
         verbose_name='Пользователь',
     )
     name = models.CharField(
-        'Название планировки',
+        'Название комнаты',
         max_length=settings.MAX_LENGTH_ROOM_NAME,
-    )
-    created = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name='Дата и время создания',
-        db_index=True,
     )
     first_wall = models.PositiveIntegerField(
         'Длина 1 стены',
@@ -45,6 +40,33 @@ class RoomLayout(models.Model):
         'Длина 4 стены',
         help_text='Длина стены в мм',
         validators=(minimum_len_width_validator,),
+    )
+
+    class Meta:
+        verbose_name = 'Комната'
+        verbose_name_plural = 'Комнаты'
+
+    def __str__(self) -> str:
+        return f"Комната: {self.name}"
+
+
+class RoomLayout(models.Model):
+    """Model of room layout."""
+
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name='layouts',
+        verbose_name='Комната',
+    )
+    name = models.CharField(
+        'Название планировки',
+        max_length=settings.MAX_LENGTH_ROOM_NAME,
+    )
+    created = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name='Дата и время создания',
+        db_index=True,
     )
     furniture_placement = models.ManyToManyField(
         'Furniture',
