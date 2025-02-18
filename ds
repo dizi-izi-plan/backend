@@ -1,0 +1,249 @@
+[33mcommit 91ba65eb0a796045be16933a07cb9f3f43789b3b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;32mmain[m[33m, [m[1;32mdev[m[33m)[m
+Author: Ярослав Богданов <givik7788@gmail.com>
+Date:   Sat Jan 25 18:59:39 2025 +0300
+
+    transfer method copy in room_layout.py to services/room_layout_service.py:copy_room_layout
+
+[33mcommit 2461222f761f45304761ff3c5bafb6ca2f11cee8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: a19183a da42c02
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Mon Nov 11 21:07:15 2024 +0400
+
+    Merge pull request #116 from dizi-izi-plan/develop
+    
+    Merge develop
+
+[33mcommit da42c02a91a5abd6d0bc48609065a7b4caa8a4e5[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: Aroptich <113030792+Aroptich@users.noreply.github.com>
+Date:   Mon Nov 11 20:12:00 2024 +0700
+
+    Adding fixtures with model test data (#114)
+    
+    * Added test fixtures for users with tariffs
+    
+    * Added test fixtures room type
+    
+    * Added test furniture fixtures
+    
+    * Added test fixtures for room layouts
+    
+    * Added description of boot commit to README.
+
+[33mcommit f700950d5f57c26a5dbf54d20b0fbff3d6973f1e[m
+Author: Aroptich <113030792+Aroptich@users.noreply.github.com>
+Date:   Sat Nov 9 15:30:43 2024 +0700
+
+    User authentication and authorization via Yandex (#113)
+    
+    * The drf_social_auth2 library is installed;
+    drf_social_auth2 added to requirements.txt
+    
+    * Added settings for authentication and registration
+    
+    * Added URL for user authentication and authorization via social networks
+    
+    * Changes have been made to the writing style
+
+[33mcommit dfd9ba42a6fd6106f4a47f3ac28500b9ec47ad86[m
+Merge: 7c78f35 99c3dfb
+Author: Семён <120897217+Pokatilov-s@users.noreply.github.com>
+Date:   Thu Nov 7 15:30:16 2024 +0500
+
+    Merge pull request #111 feature/password-and-email-validation
+    
+    updating password, email validators
+
+[33mcommit 99c3dfbf232ff928b0a2829ac14c8a9240047ac2[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Thu Nov 7 14:31:34 2024 +0500
+
+    correction of remarks
+
+[33mcommit fdddd90595d3beaa0b5e854a4a601d58b1e987ae[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Wed Nov 6 23:23:18 2024 +0500
+
+    correction of remarks
+
+[33mcommit ef86c7a6ce326d1d5ce0a606255c9512ee3c8eea[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Thu Oct 24 10:05:29 2024 +0500
+
+    correction get_help_text in password validators
+
+[33mcommit 8ec8854f536faeb32b415387d62e2e882251869f[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Fri Oct 4 21:57:22 2024 +0500
+
+    updating password, email validators
+
+[33mcommit a19183a3a6f4c0084d9f8e5c50b67822759fd6b1[m
+Merge: ac7e161 7c78f35
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Fri Oct 18 23:37:47 2024 +0400
+
+    Merge pull request #110 from dizi-izi-plan/develop
+    
+    merge develop
+
+[33mcommit 7c78f3571f511a8b13710e321464a96bbb3022e0[m
+Merge: 876a480 7011768
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Fri Oct 18 23:35:32 2024 +0400
+
+    Merge pull request #108 from Aroptich/feature/fixture-tariffs
+    
+     Fixture with test tariffs
+
+[33mcommit 7011768803ba860b0b015f30223d936ba54de01b[m
+Author: Alexsandr <artamoshkinas@gmail.com>
+Date:   Thu Oct 10 15:33:29 2024 +0700
+
+    Added:
+    To the fixtures directory with test tariffs
+    Descriptions of loading data into the database have been added to the README.md file
+
+[33mcommit 876a480682c7bde826abc864e39ca6579f04a1ae[m
+Author: Aroptich <113030792+Aroptich@users.noreply.github.com>
+Date:   Wed Oct 9 19:39:31 2024 +0700
+
+    Added settings for fixtures and user fixtures
+
+[33mcommit bd64fdc5b87ca624f45304c0d3ce2ab089a41447[m
+Merge: f6f4dd0 d7fb170
+Author: Семён <120897217+Pokatilov-s@users.noreply.github.com>
+Date:   Thu Sep 26 20:40:52 2024 +0500
+
+    Merge pull request #105 from dizi-izi-plan/feature/launching-with-develop-settings
+    
+    Feature/launching with develop settings
+
+[33mcommit d7fb170e5c7c9967ba5b05a571e2aa3db7dc70af[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Thu Sep 26 19:11:03 2024 +0500
+
+    Fixs: changing the settings module selection
+
+[33mcommit 6f7c03fb1e7250351281f7b7fccaeecf15ddb2c7[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Thu Sep 26 17:35:03 2024 +0500
+
+    Fixs: changing the settings module selection
+
+[33mcommit 8e5d6d79983a8b8f3602d2c6cd8d18761553eac6[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Tue Sep 24 16:27:05 2024 +0500
+
+    Changing the settings module selection
+
+[33mcommit c7b75e843c1012647b353122a2b93c6087282427[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Tue Sep 24 01:42:25 2024 +0500
+
+    Changing the settings module selection
+
+[33mcommit ffed5ca59097b60b5039b182b41199352f066a4b[m
+Author: Pokatilov-s <semenpokatilov465@gmail.com>
+Date:   Fri Sep 13 16:56:30 2024 +0500
+
+    Launching a project with the develop settings module
+
+[33mcommit f6f4dd045135f2a474982c958965faa7026a2ec7[m
+Merge: b75b54f 2c27638
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Fri Aug 23 19:30:20 2024 +0400
+
+    Merge pull request #103 from dizi-izi-plan/feature/djoser-endpoints-refactor
+    
+    feat: customize Djoser endpoints for activation, password reset, and …
+
+[33mcommit 2c27638a0681dc56b6e1b44b19ad1a56a04158a1[m
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Fri Aug 23 19:25:46 2024 +0400
+
+    feat: customize Djoser endpoints for activation, password reset, and username reset
+
+[33mcommit b75b54f4147d105d98cf44a16d2ffcb41c27ba7b[m
+Merge: bd92715 b1b26cb
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Thu Aug 8 13:55:48 2024 +0400
+
+    Merge pull request #102 from dizi-izi-plan/dev_pit
+    
+    Moving statics to the root of the working folder
+
+[33mcommit b1b26cb5f3f1a44a4a957a9b70a54f5746a642da[m
+Merge: a93e90d b0a438b
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 02:05:08 2024 +0800
+
+    Merge remote-tracking branch 'origin/dev_pit' into dev_pit
+    
+    # Conflicts:
+    #       config/settings/base.py
+
+[33mcommit a93e90dbc0a2141ef61c5d819349c914ebc7bc26[m
+Merge: 317ea0a 5706eff
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 02:03:31 2024 +0800
+
+    Merge remote-tracking branch 'origin/dev_pit' into dev_pit
+    
+    # Conflicts:
+    #       config/settings/base.py
+
+[33mcommit b0a438b2564716677264abf9faeed3d8afcaef0d[m
+Merge: 317ea0a 5706eff
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 02:03:31 2024 +0800
+
+    Merge remote-tracking branch 'origin/dev_pit' into dev_pit
+    
+    # Conflicts:
+    #       config/settings/base.py
+
+[33mcommit 317ea0af41f68781baaaf0cfd7142b16b92f1d7e[m
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 02:01:35 2024 +0800
+
+    Изменение пути статики v2
+
+[33mcommit 5706eff4d3722d5482a614a53c3b7e28c4f0cee3[m
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 02:01:35 2024 +0800
+
+    Изменение пути статики v2
+
+[33mcommit 87a4cbcd293aae06abb6a9632145ceb319509b14[m
+Author: Pit <p.gainanov@gmail.com>
+Date:   Wed Jul 31 01:41:41 2024 +0800
+
+    Изменение пути статики v2
+
+[33mcommit c44fb6201f0cee5987dd9a9bbab631a904396203[m
+Author: Pit <p.gainanov@gmail.com>
+Date:   Mon Jul 29 19:26:28 2024 +0800
+
+    Изменение пути статики
+
+[33mcommit 61c9a865525315c1cb1193aa3babc28f0f417300[m
+Author: Pit <p.gainanov@gmail.com>
+Date:   Fri Jul 26 02:23:20 2024 +0800
+
+    Перенос статики в корень рабочей папки
+
+[33mcommit ac7e16111a94e7a76997403b72c7c0342975c200[m
+Merge: 405883f 4112c0c
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Mon Jul 15 19:41:20 2024 +0400
+
+    Merge pull request #97 from dizi-izi-plan/feature/wait_for_database_connnection
+    
+    Add healthcheck on database to docker-compose
+
+[33mcommit bd9271508923a43844bb0d63264d0af078249a60[m
+Merge: bc55eef 4112c0c
+Author: Sergei Morozov <sergei.sm.morozov@gmail.com>
+Date:   Mon Jul 15 19:41:08 2024 +0400
+
+    Merge pull request #98 from dizi-izi-p

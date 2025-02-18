@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 
-from furniture.utils import get_name
+from furniture.services import copy_room_layout
 from furniture.validators import minimum_len_width_validator
 
 User = get_user_model()
@@ -58,18 +58,10 @@ class RoomLayout(models.Model):
     def __str__(self) -> str:
         return f"Проект {self.name} пользователя {self.user.email}"
 
-    def copy(self, request):
-        """Возвращает копию объекта комнаты.
-
+    def copy(self, user):
+        """
+        Возвращает копию объекта комнаты.
         С новым первичным ключом, но теми же значениями атрибутов.
-
         M2M отношения не копируются.
         """
-        return RoomLayout.objects.create(
-            user=self.user,
-            name=get_name(self.user),
-            first_wall=self.first_wall,
-            second_wall=self.second_wall,
-            third_wall=self.third_wall,
-            fourth_wall=self.fourth_wall,
-        )
+        return copy_room_layout(self, user)
