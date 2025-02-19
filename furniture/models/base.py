@@ -1,3 +1,4 @@
+from django.contrib.gis.db import models as gis_models
 from django.db import models
 
 
@@ -15,8 +16,8 @@ class Coordinate(models.Model):
         return f'x={self.x}, y={self.y}'
 
 
-class PlacementCoordinates(models.Model):
-    """Абстрактная модель с указателем на помещение и координаты."""
+class PlacementCoordinates(gis_models.Model):
+    """Abstract model with a pointer to a room and coordinates."""
 
     room = models.ForeignKey(
         "RoomLayout",
@@ -24,32 +25,10 @@ class PlacementCoordinates(models.Model):
         verbose_name='Комната',
         related_name='%(class)ss',
     )
-    north_west = models.OneToOneField(
-        'Coordinate',
-        verbose_name='Координата north-west',
-        on_delete=models.PROTECT,
-        null=True,
-    )
-    north_east = models.OneToOneField(
-        'Coordinate',
-        verbose_name='Координата north-east',
-        on_delete=models.PROTECT,
-        null=True,
-        related_name='+',
-    )
-    south_west = models.OneToOneField(
-        'Coordinate',
-        verbose_name='Координата south-west',
-        on_delete=models.PROTECT,
-        null=True,
-        related_name='+',
-    )
-    south_east = models.OneToOneField(
-        'Coordinate',
-        verbose_name='Координата south-east',
-        on_delete=models.PROTECT,
-        null=True,
-        related_name='+',
+    shape = gis_models.PolygonField(
+        verbose_name='Координаты объекта',
+        srid=0,
+        null=True
     )
 
     class Meta:
